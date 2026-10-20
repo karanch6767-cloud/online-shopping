@@ -1,51 +1,22 @@
-# ShopSphere — Online Shopping Website
+# ShopSphere — Online Shopping Project
 
-A responsive educational e-commerce storefront made with HTML, CSS and vanilla JavaScript.
+This repository contains two educational implementations of an online shopping system:
 
-## Features
-- Product catalogue with images, categories and prices
-- Search products by name/category/description
-- Category filtering and price/name sorting
-- Add to cart, change quantities, and remove items
-- Automatic subtotal, shipping estimate and total
-- Cart saved in browser localStorage
-- Validated demo checkout form
-- Responsive desktop/mobile design
-- Database design, SQL examples, test plan and contribution guide
+- **Java console application:** Core Java, object-oriented design, product search, shopping cart, quantity management, shipping calculations, demo checkout, database design and testing guide. Start here: [`java-version/README.md`](java-version/README.md).
+- **Web storefront:** HTML, CSS and JavaScript responsive storefront with product catalogue, search/filtering, cart and simulated checkout. Start here: [`index.html`](index.html).
 
-## Tech stack
-HTML5, CSS3, JavaScript ES6, browser localStorage.
+## Java version (recommended if your assignment requires Java)
+Requires JDK 17 or later. From the `java-version` directory, run:
 
-## Files
-- `index.html` — storefront and cart/checkout markup
-- `styles.css` — responsive design
-- `app.js` — product catalogue and shopping logic
-- `data-model.md` — suggested relational database design and SQL
-- `TESTING.md` — manual test checklist
-- `CONTRIBUTING.md` — contribution guidelines
+```bash
+javac -d out src/com/shopsphere/*.java
+java -cp out com.shopsphere.Main
+```
 
-## Run locally
-Clone this repository, then open `index.html` in your browser. Alternatively, run `python -m http.server 8000` in the project folder and visit `http://localhost:8000`.
+Java source code is in `java-version/src/com/shopsphere/`. Read [`java-version/DATABASE_DESIGN.md`](java-version/DATABASE_DESIGN.md) for a suggested SQL model and [`java-version/TESTING.md`](java-version/TESTING.md) for a manual test checklist.
 
-## Use the store
-1. Search/filter products or sort by price.
-2. Add items to the cart.
-3. Open the cart to change quantities or remove products.
-4. Proceed to checkout and fill the demo form.
+## Web version
+Open `index.html` in a browser, or run `python -m http.server 8000` from the repository root and visit `http://localhost:8000`.
 
-## Shopping flow
-Browse → Search/filter → Add to cart → Review totals → Demo checkout → Confirmation.
-
-## Important limitations
-This is a front-end academic project, not a production commerce system. It does not authenticate users, manage inventory, create real orders, or process payments. Do not enter real personal or payment information. A production implementation requires a secure backend, server-side price validation, database transactions, authentication, HTTPS and a compliant payment provider.
-
-## Future improvements
-- Node.js/Express, Django or Spring Boot backend
-- MySQL/PostgreSQL database
-- Login, order history and inventory management
-- Wishlist, reviews and product detail pages
-- Payment integration in sandbox mode
-- Automated testing and deployment
-
-## Learning outcomes
-Practise DOM manipulation, event handling, array filtering/sorting, form validation, responsive CSS and browser storage.
+## Important note
+Both versions are learning demos. Checkout does not take real payments, and neither version provides production authentication, persistent orders, or real inventory. Never enter sensitive personal or payment details.
